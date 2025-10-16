@@ -23,7 +23,7 @@ if not exist "C:\Program Files\StarUML\resources\app.asar.backup" (
 
 echo.
 echo Copying Japanese localized app.asar...
-copy /Y "%USERPROFILE%\app-japanese.asar" "C:\Program Files\StarUML\resources\app.asar"
+copy /Y "%~dp0app-japanese.asar" "C:\Program Files\StarUML\resources\app.asar"
 if errorlevel 1 (
     echo ERROR: Failed to copy file. Please run as administrator.
     pause
