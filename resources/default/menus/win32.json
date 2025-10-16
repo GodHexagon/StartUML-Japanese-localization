@@ -1,0 +1,772 @@
+{
+  "menu": [
+    {
+      "label": "ファイル",
+      "id": "file",
+      "submenu": [
+        {
+          "label": "新規作成",
+          "id": "file.new",
+          "command": "application:new"
+        },
+        {
+          "label": "テンプレートから新規作成",
+          "id": "file.new-from-template",
+          "command": "application:new-from-template"
+        },
+        {
+          "label": "開く...",
+          "id": "file.open",
+          "command": "project:open"
+        },
+        {
+          "label": "最近使ったファイル",
+          "id": "file.open-recent",
+          "submenu": []
+        },
+        {
+          "label": "保存",
+          "id": "file.save",
+          "command": "project:save"
+        },
+        {
+          "label": "名前を付けて保存...",
+          "id": "file.save-as",
+          "command": "project:save-as"
+        },
+        {
+          "label": "閉じる",
+          "id": "file.close",
+          "command": "project:close"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "インポート",
+          "id": "file.import",
+          "submenu": [
+            {
+              "label": "フラグメント...",
+              "id": "file.import.fragment",
+              "command": "project:import-fragment"
+            }
+          ]
+        },
+        {
+          "label": "エクスポート",
+          "id": "file.export",
+          "submenu": [
+            {
+              "label": "フラグメント...",
+              "id": "file.export.fragment",
+              "command": "project:export-fragment"
+            }
+          ]
+        },
+        {
+          "label": "ダイアグラムをエクスポート",
+          "id": "file.export-diagram-as",
+          "submenu": [
+            {
+              "label": "PNG...",
+              "id": "file.export-diagram-as.png",
+              "command": "project:export-diagram-to-png"
+            },
+            {
+              "label": "JPEG...",
+              "id": "file.export-diagram-as.jpeg",
+              "command": "project:export-diagram-to-jpeg"
+            },
+            {
+              "label": "SVG...",
+              "id": "file.export-diagram-as.svg",
+              "command": "project:export-diagram-to-svg"
+            },
+            {
+              "type": "separator"
+            },
+            {
+              "label": "すべてPNGに...",
+              "id": "file.export-diagram-as.all-to-pngs",
+              "command": "project:export-diagram-all-to-pngs"
+            },
+            {
+              "label": "すべてJPEGに...",
+              "id": "file.export-diagram-as.all-to-jpegs",
+              "command": "project:export-diagram-all-to-jpegs"
+            },
+            {
+              "label": "すべてSVGに...",
+              "id": "file.export-diagram-as.all-to-svg",
+              "command": "project:export-diagram-all-to-svgs"
+            }
+          ]
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "環境設定...",
+          "id": "app.preferences",
+          "command": "application:preferences"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "PDFに印刷...",
+          "id": "file.print-to-pdf",
+          "command": "project:print-to-pdf"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "終了",
+          "id": "app.quit",
+          "role": "quit"
+        }
+      ]
+    },
+    {
+      "label": "編集",
+      "id": "edit",
+      "submenu": [
+        {
+          "label": "元に戻す",
+          "id": "edit.undo",
+          "command": "edit:undo"
+        },
+        {
+          "label": "やり直す",
+          "id": "edit.redo",
+          "command": "edit:redo"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "切り取り",
+          "id": "edit.cut",
+          "command": "edit:cut"
+        },
+        {
+          "label": "コピー",
+          "id": "edit.copy",
+          "command": "edit:copy"
+        },
+        {
+          "label": "ダイアグラムを画像としてコピー",
+          "id": "edit.copy-diagram-as-image",
+          "command": "edit:copy-diagram-as-image"
+        },
+        {
+          "label": "貼り付け",
+          "id": "edit.paste",
+          "command": "edit:paste"
+        },
+        {
+          "label": "削除",
+          "id": "edit.delete",
+          "command": "edit:delete"
+        },
+        {
+          "label": "モデルから削除",
+          "id": "edit.delete-from-model",
+          "command": "edit:delete-from-model"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "上へ移動",
+          "id": "edit.move-up",
+          "command": "edit:move-up"
+        },
+        {
+          "label": "下へ移動",
+          "id": "edit.move-down",
+          "command": "edit:move-down"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "すべて選択",
+          "id": "edit.select-all",
+          "command": "edit:select-all"
+        },
+        {
+          "label": "エクスプローラーで選択",
+          "id": "edit.select-in-explorer",
+          "command": "edit:select-in-explorer"
+        },
+        {
+          "label": "ダイアグラムで選択",
+          "id": "edit.select-in-diagram",
+          "command": "edit:select-in-diagram"
+        },
+        {
+          "label": "サブダイアグラムを開く",
+          "id": "edit.open-sub-diagram",
+          "command": "edit:open-sub-diagram"
+        }
+      ]
+    },
+    {
+      "label": "書式",
+      "id": "format",
+      "submenu": [
+        {
+          "label": "フォント...",
+          "id": "format.font",
+          "command": "format:font"
+        },
+        {
+          "label": "塗りつぶし色...",
+          "id": "format.fill-color",
+          "command": "format:fill-color"
+        },
+        {
+          "label": "線の色...",
+          "id": "format.line-color",
+          "command": "format:line-color"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "線のスタイル",
+          "id": "format.linestyle",
+          "submenu": [
+            {
+              "label": "直角",
+              "id": "format.linestyle.rectilinear",
+              "type": "checkbox",
+              "command": "format:linestyle-rectilinear"
+            },
+            {
+              "label": "斜め",
+              "id": "format.linestyle.oblique",
+              "type": "checkbox",
+              "command": "format:linestyle-oblique"
+            },
+            {
+              "label": "角丸直角",
+              "id": "format.linestyle.roundrect",
+              "type": "checkbox",
+              "command": "format:linestyle-roundrect"
+            },
+            {
+              "label": "曲線",
+              "id": "format.linestyle.curve",
+              "type": "checkbox",
+              "command": "format:linestyle-curve"
+            }
+          ]
+        },
+        {
+          "label": "自動リサイズ",
+          "id": "format.auto-resize",
+          "type": "checkbox",
+          "command": "format:auto-resize"
+        },
+        {
+          "label": "影を表示",
+          "id": "format.show-shadow",
+          "type": "checkbox",
+          "command": "format:show-shadow"
+        }
+      ]
+    },
+    {
+      "label": "モデル",
+      "id": "model",
+      "submenu": [
+        {
+          "label": "ダイアグラムを追加",
+          "id": "model.add-diagram",
+          "command": "model:add-diagram"
+        },
+        {
+          "label": "追加",
+          "id": "model.add",
+          "command": "model:add"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "タグエディター...",
+          "id": "model.tag-editor",
+          "command": "model:tag-editor"
+        }
+      ]
+    },
+    {
+      "label": "ツール",
+      "id": "tools",
+      "submenu": [
+        {
+          "label": "拡張機能マネージャー...",
+          "id": "tools.extension-manager",
+          "command": "tools:extension-manager"
+        }
+      ]
+    },
+    {
+      "label": "表示",
+      "id": "view",
+      "submenu": [
+        {
+          "label": "クイック検索...",
+          "id": "view.quick-find",
+          "command": "view:quick-find"
+        },
+        {
+          "label": "コマンドパレット...",
+          "id": "view.command-palette",
+          "command": "view:command-palette"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "ダイアグラムを閉じる",
+          "id": "view.close-diagram",
+          "command": "view:close-diagram"
+        },
+        {
+          "label": "他のダイアグラムを閉じる",
+          "id": "view.close-other-diagrams",
+          "command": "view:close-other-diagrams"
+        },
+        {
+          "label": "すべてのダイアグラムを閉じる",
+          "id": "view.close-all-diagrams",
+          "command": "view:close-all-diagrams"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "次のダイアグラム",
+          "id": "view.next-diagram",
+          "command": "view:next-diagram"
+        },
+        {
+          "label": "前のダイアグラム",
+          "id": "view.previous-diagram",
+          "command": "view:previous-diagram"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "拡大",
+          "id": "view.zoom-in",
+          "command": "view:zoom-in"
+        },
+        {
+          "label": "縮小",
+          "id": "view.zoom-out",
+          "command": "view:zoom-out"
+        },
+        {
+          "label": "実際のサイズ",
+          "id": "view.actual-size",
+          "command": "view:actual-size"
+        },
+        {
+          "label": "ウィンドウに合わせる",
+          "id": "view.fit-to-window",
+          "command": "view:fit-to-window"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "グリッドを表示",
+          "id": "view.show-grid",
+          "type": "checkbox",
+          "command": "view:show-grid"
+        },
+        {
+          "label": "グリッドにスナップ",
+          "id": "view.snap-to-grid",
+          "type": "checkbox",
+          "command": "view:snap-to-grid"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "サイドバー",
+          "id": "view.sidebar",
+          "type": "checkbox",
+          "command": "view:sidebar"
+        },
+        {
+          "label": "ナビゲーター",
+          "id": "view.navigator",
+          "type": "checkbox",
+          "command": "view:navigator"
+        },
+        {
+          "label": "ツールバー",
+          "id": "view.toolbar",
+          "type": "checkbox",
+          "command": "view:toolbar"
+        },
+        {
+          "label": "ステータスバー",
+          "id": "view.statusbar",
+          "type": "checkbox",
+          "command": "view:statusbar"
+        },
+        {
+          "label": "ツールボックス",
+          "id": "view.toolbox",
+          "type": "checkbox",
+          "command": "view:toolbox"
+        },
+        {
+          "label": "エディター",
+          "id": "view.editors",
+          "type": "checkbox",
+          "command": "view:editors"
+        }
+      ]
+    },
+    {
+      "label": "ウィンドウ",
+      "role": "window",
+      "id": "window",
+      "submenu": [
+        {
+          "label": "最小化",
+          "role": "minimize"
+        },
+        {
+          "label": "フルスクリーン",
+          "role": "togglefullscreen"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "すべてを前面に",
+          "role": "front"
+        }
+      ]
+    },
+    {
+      "label": "ヘルプ",
+      "role": "help",
+      "id": "help",
+      "submenu": [
+        {
+          "label": "StarUMLについて",
+          "id": "app.about",
+          "command": "help:about"
+        },
+        {
+          "label": "更新の確認...",
+          "id": "help.check-for-updates",
+          "command": "help:check-for-updates"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "ライセンスキーの入力...",
+          "id": "help.enter-license-key",
+          "command": "help:enter-license-key"
+        },
+        {
+          "label": "ライセンスキーの削除...",
+          "id": "help.delete-license-key",
+          "command": "help:delete-license-key"
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "label": "ドキュメント...",
+          "id": "help.documentation",
+          "command": "help:documentation"
+        },
+        {
+          "label": "フォーラム...",
+          "id": "help.forum",
+          "command": "help:forum"
+        },
+        {
+          "label": "機能リクエスト...",
+          "id": "help.request-feature",
+          "command": "help:request-feature"
+        }
+      ]
+    }
+  ],
+  "context-menu": {
+    "diagram-canvas": [
+      {
+        "label": "追加",
+        "id": "model.add",
+        "command": "model:add"
+      },
+      {
+        "label": "ダイアグラムを追加",
+        "id": "model.add-diagram",
+        "command": "model:add-diagram"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "書式",
+        "id": "format",
+        "submenu": [
+          {
+            "label": "フォント...",
+            "id": "format.font",
+            "command": "format:font"
+          },
+          {
+            "label": "塗りつぶし色...",
+            "id": "format.fill-color",
+            "command": "format:fill-color"
+          },
+          {
+            "label": "線の色...",
+            "id": "format.line-color",
+            "command": "format:line-color"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "label": "線のスタイル",
+            "id": "format.linestyle",
+            "submenu": [
+              {
+                "label": "直角",
+                "id": "format.linestyle.rectilinear",
+                "type": "checkbox",
+                "command": "format:linestyle-rectilinear"
+              },
+              {
+                "label": "斜め",
+                "id": "format.linestyle.Oblique",
+                "type": "checkbox",
+                "command": "format:linestyle-oblique"
+              },
+              {
+                "label": "角丸直角",
+                "id": "format.linestyle.roundrect",
+                "type": "checkbox",
+                "command": "format:linestyle-roundrect"
+              },
+              {
+                "label": "曲線",
+                "id": "format.linestyle.curve",
+                "type": "checkbox",
+                "command": "format:linestyle-curve"
+              }
+            ]
+          },
+          {
+            "label": "自動リサイズ",
+            "id": "format.auto-resize",
+            "type": "checkbox",
+            "command": "format:auto-resize"
+          },
+          {
+            "label": "影を表示",
+            "id": "format.show-shadow",
+            "type": "checkbox",
+            "command": "format:show-shadow"
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "切り取り",
+        "id": "edit.cut",
+        "command": "edit:cut"
+      },
+      {
+        "label": "コピー",
+        "id": "edit.copy",
+        "command": "edit:copy"
+      },
+      {
+        "label": "貼り付け",
+        "id": "edit.paste",
+        "command": "edit:paste"
+      },
+      {
+        "label": "すべて選択",
+        "id": "edit.select-all",
+        "command": "edit:select-all"
+      },
+      {
+        "label": "削除",
+        "id": "edit.delete",
+        "command": "edit:delete"
+      },
+      {
+        "label": "モデルから削除",
+        "id": "edit.delete-from-model",
+        "command": "edit:delete-from-model"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "エクスプローラーで選択",
+        "id": "edit.select-in-explorer",
+        "command": "edit:select-in-explorer"
+      },
+      {
+        "label": "ダイアグラムで選択",
+        "id": "edit.select-in-diagram",
+        "command": "edit:select-in-diagram"
+      },
+      {
+        "label": "サブダイアグラムを開く",
+        "id": "edit.open-sub-diagram",
+        "command": "edit:open-sub-diagram"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "タグエディター...",
+        "id": "model.tag-editor",
+        "command": "model:tag-editor"
+      }
+    ],
+    "model-explorer": [
+      {
+        "label": "ダイアグラムを追加",
+        "id": "model.add-diagram",
+        "command": "model:add-diagram"
+      },
+      {
+        "label": "追加",
+        "id": "model.add",
+        "command": "model:add"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "切り取り",
+        "id": "edit.cut",
+        "command": "edit:cut"
+      },
+      {
+        "label": "コピー",
+        "id": "edit.copy",
+        "command": "edit:copy"
+      },
+      {
+        "label": "貼り付け",
+        "id": "edit.paste",
+        "command": "edit:paste"
+      },
+      {
+        "label": "モデルから削除",
+        "id": "edit.delete-from-model",
+        "command": "edit:delete-from-model"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "上へ移動",
+        "id": "edit.move-up",
+        "command": "edit:move-up"
+      },
+      {
+        "label": "下へ移動",
+        "id": "edit.move-down",
+        "command": "edit:move-down"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "ダイアグラムで選択",
+        "id": "edit.select-in-diagram",
+        "command": "edit:select-in-diagram"
+      }
+    ],
+    "working-diagrams": [
+      {
+        "label": "ダイアグラムを閉じる",
+        "id": "view.close-diagram",
+        "command": "view:close-diagram"
+      },
+      {
+        "label": "他のダイアグラムを閉じる",
+        "id": "view.close-other-diagrams",
+        "command": "view:close-other-diagrams"
+      },
+      {
+        "label": "すべてのダイアグラムを閉じる",
+        "id": "view.close-all-diagrams",
+        "command": "view:close-all-diagrams"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "名前を変更",
+        "id": "view.rename-diagram",
+        "command": "view:rename-diagram"
+      }
+    ],
+    "model-explorer-settings": [
+      {
+        "label": "追加順にソート",
+        "id": "explorer.sort-by-added",
+        "type": "checkbox",
+        "command": "explorer:sort-by-added"
+      },
+      {
+        "label": "名前順にソート",
+        "id": "explorer.sort-by-name",
+        "type": "checkbox",
+        "command": "explorer:sort-by-name"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "ステレオタイプテキストを表示",
+        "id": "explorer.show-stereotype-text",
+        "type": "checkbox",
+        "command": "explorer:show-stereotype-text"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "label": "すべて展開",
+        "id": "explorer.expand-all",
+        "command": "explorer:expand-all"
+      },
+      {
+        "label": "すべて折りたたむ",
+        "id": "explorer.collapse-all",
+        "command": "explorer:collapse-all"
+      }
+    ]
+  }
+}
