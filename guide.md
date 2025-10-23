@@ -258,6 +258,8 @@ Windowsの場合は `process.platform` が `"win32"` なので、`win32.json`が
    npx asar extract app.asar StarUML-extracted
    ```
 
+   普通は、app.asarがここにインストールされている: `C:\Program Files\StarUML\resources\app-update.yml`
+
 2. **メニューファイルを日本語化**
 
    `translate-menu.py`スクリプトを使用して、`win32.json`の全ての`"label"`フィールドを日本語に変換：
